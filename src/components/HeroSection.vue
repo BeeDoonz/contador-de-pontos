@@ -797,6 +797,24 @@ onUnmounted(() => {
     padding: 74px 12px 50px;
   }
 
+  /* No mobile a base da foto (onde fica o "Os 300") derrete gradualmente no
+     fundo escuro: degrade progressivo, sem faixa/corte, chegando a preto solido
+     so na borda final. Fica leve na zona do "Os 300" pra ele nao sumir. */
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(6, 6, 16, 0.5) 0%,
+      rgba(6, 6, 16, 0.12) 20%,
+      rgba(6, 6, 16, 0.05) 42%,
+      rgba(6, 6, 16, 0.08) 60%,
+      rgba(6, 6, 16, 0.18) 74%,
+      rgba(6, 6, 16, 0.35) 84%,
+      rgba(6, 6, 16, 0.62) 92%,
+      rgba(6, 6, 16, 0.85) 97%,
+      rgba(6, 6, 16, 1) 100%
+    );
+  }
+
   .hero-scoreboard {
     flex-direction: column;
     gap: var(--space-6);

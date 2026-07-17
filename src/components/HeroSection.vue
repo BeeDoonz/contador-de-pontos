@@ -562,9 +562,10 @@ onUnmounted(() => {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--color-muted);
+  /* Cinza claro (nao o --color-muted, que some sobre o banner) + contorno escuro */
+  color: #dfe3f0;
   margin-top: 2px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.95), 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 .team-motto {
